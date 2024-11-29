@@ -9,8 +9,8 @@ response = requests.get(url)
 if response.status_code == 200:
     concurso = response.json()
     for i in concurso:
-        #print(i)
-        if i['data'].endswith("2024"):
+        print(i)
+        if i['data'].endswith("112024"):
             concurso = i['concurso']
             data = i['data']
             dezenas1 = i['dezenas'][0]
@@ -20,7 +20,7 @@ if response.status_code == 200:
             dezenas5 = i['dezenas'][4]
             dezenas6 = i['dezenas'][5]
             #print(concurso, data, dezenas1, dezenas2, dezenas3, dezenas4, dezenas5, dezenas6)
-            inserirbanco("megasena", data, concurso, dezenas1, dezenas2, dezenas3, dezenas4, dezenas5, dezenas6)
+            #inserirbanco("megasena", data, concurso, dezenas1, dezenas2, dezenas3, dezenas4, dezenas5, dezenas6)
  
     # workbook =openpyxl.Workbook()
     # sheet = workbook.active
